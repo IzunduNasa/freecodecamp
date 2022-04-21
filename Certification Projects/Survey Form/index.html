@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+	  <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1 id='title'>Survey Form</h1>
+    <p id='description'>Please fill out this form with the required information</p>
+    <form id='survey-form'>
+      <fieldset>
+        <label id="name-label">Enter Your Name: <input type="text" id='name' placeholder='Your full name' required /></label>
+        <label id="number-label">Your number: <input id='number' type="number" min="1" max="999999999" placeholder='000-000-0000' />
+			  </label>
+        <label id="email-label">Enter Your Email: <input type="email" id='email' placeholder='Your email' required /></label>
+        <label>Create a New Password: <input type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" name="account-type" class="inline" /> Student</label>
+        <label><input type="radio" name="account-type" class="inline" /> Teacher</label>
+        <label>What would you like to see improved? (Check all that apply)</label>
+          <label><input type="checkbox" class="inline" value='1' />Beans</label>
+        <label><input type="checkbox" class="inline" value='2' />Rice</label>
+        <label><input type="checkbox" class="inline" value='3' />Beans and Rice??</label>
+      </fieldset>
+      <fieldset>
+        <label>Provide a bio:
+          <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+			  </label>
+        <label>How did you hear about us?
+          <select name="referrer" id='dropdown'>
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <button id="submit" action="submit" />Submit</button>
+    </form>
+  </body>
+</html>
